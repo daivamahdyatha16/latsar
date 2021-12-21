@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import { ToastProvider } from "react-toast-notifications";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ToastProvider autoDismiss>
+      <BrowserRouter>
+        <App /> 
+      </BrowserRouter>
+    </ToastProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
